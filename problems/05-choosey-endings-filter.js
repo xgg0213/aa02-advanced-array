@@ -27,6 +27,15 @@ console.log(chooseyEndings(17, 'ily'));
 
 let chooseyEndings = function(words, suffix) {
   // Your code here 
+  if (Array.isArray(words) === false) {
+    return [ ];
+  } else {
+    let newArr = words.filter(function(word) {
+      return word.endsWith(suffix);
+    });
+    return newArr;
+  }
+
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
